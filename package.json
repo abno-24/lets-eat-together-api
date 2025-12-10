@@ -14,13 +14,12 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node -r dotenv/config --experimental-json-modules --loader esm-module-alias/loader --no-warnings src/index.js",
-    "dev": "nodemon -r dotenv/config --experimental-json-modules --loader esm-module-alias/loader --no-warnings src/index.js"
+    "start": "node -r dotenv/config --experimental-json-modules src/index.js",
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
-    "esm-module-alias": "^2.2.1",
     "express": "^5.2.1",
     "morgan": "^1.10.1",
     "winston": "^3.19.0"
@@ -29,13 +28,7 @@
     "nodemon": "^3.1.11",
     "prettier": "^3.7.4"
   },
-  "aliases": {
-    "@controllers": "src/controllers",
-    "@db": "src/db",
-    "@middlewares": "src/middlewares",
-    "@models": "src/models",
-    "@routes": "src/routes",
-    "@services": "src/services",
-    "@utils": "src/utils"
+  "engines": {
+    "node": ">=14.16"
   }
 }
