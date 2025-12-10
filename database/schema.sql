@@ -1,3 +1,5 @@
+USE dish_search_service;
+
 -- Disable foreign key checks temporarily for a clean setup
 SET FOREIGN_KEY_CHECKS = 0;
 
