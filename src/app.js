@@ -3,6 +3,7 @@ import cors from "cors";
 import logger from "./utils/logger.js";
 import morgan from "morgan";
 import { errorHandler } from "./middlewares/errorHandler.middleware.js";
+import healthRouter from "./routes/health/health.routes.js";
 
 const morganFormat = ":method :url :status :response-time ms";
 const app = express();
@@ -31,6 +32,9 @@ app.use(
     },
   })
 );
+
+// Health check route
+app.use("/api/v1/health", healthRouter);
 
 app.use(errorHandler);
 
