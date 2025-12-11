@@ -15,17 +15,17 @@ INSERT INTO Restaurants (id, name, city) VALUES
 
 -- Focus Dish: Chicken Biryani (Price range target: 150-300)
 INSERT INTO Menu_Items (id, restaurant_id, name, price) VALUES
-(101, 1, 'Chicken Biryani', 220.00), -- R1: Price IN range
-(102, 2, 'Chicken Biryani', 280.00), -- R2: Price IN range
-(103, 3, 'Chicken Biryani', 140.00), -- R3: Price OUT (Too low)
-(104, 4, 'Chicken Biryani', 350.00), -- R4: Price OUT (Too high)
-(105, 5, 'Chicken Biryani', 180.00); -- R5: Price IN range
+(101, 1, 'Biryani', 220.00), -- R1: Price IN range
+(102, 2, 'Biryani', 280.00), -- R2: Price IN range
+(103, 3, 'Biryani', 140.00), -- R3: Price OUT (Too low)
+(104, 4, 'Biryani', 350.00), -- R4: Price OUT (Too high)
+(105, 5, 'Biryani', 180.00); -- R5: Price IN range
 
 -- Other Dishes (Should not affect the search for 'biryani')
 INSERT INTO Menu_Items (id, restaurant_id, name, price) VALUES
-(106, 1, 'Butter Chicken', 450.00),
-(107, 2, 'Palak Paneer', 300.00),
-(108, 5, 'Veg Biryani', 150.00); -- Another biryani variant
+(106, 1, 'Chicken', 450.00),
+(107, 2, 'Paneer', 300.00),
+(108, 5, 'Manchurian', 150.00); -- Another biryani variant
 
 -- 3. Insert Data into Orders Table (The order counts for testing)
 
