@@ -8,10 +8,10 @@ Backend service to find the top 10 restaurants where a specific dish (filtered b
 
 ## 🚀 Live Deployment and Submission Links
 
-| Component             | Detail                                      | Link                                                                   |
-| :-------------------- | :------------------------------------------ | :--------------------------------------------------------------------- |
-| **Live API URL**      | The public endpoint for the search service. | `lets-eat-together-api-production.up.railway.app/api/v1/search/dishes` |
-| **GitHub Repository** | The public link to the source code.         | `https://github.com/abno-24/lets-eat-together-api`                     |
+| Component             | Detail                                      | Link                                                                    |
+| :-------------------- | :------------------------------------------ | :---------------------------------------------------------------------- |
+| **Live API URL**      | The public endpoint for the search service. | `https://lets-eat-together-api-production.up.railway.app/api/v1/health` |
+| **GitHub Repository** | The public link to the source code.         | `https://github.com/abno-24/lets-eat-together-api`                      |
 
 ---
 
