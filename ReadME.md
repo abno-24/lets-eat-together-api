@@ -84,7 +84,7 @@ To run the code locally, follow these steps:
 
 **Database Configuration (.env)**
 
-```json
+```
 PORT=3000
 CORS_ORIGIN=*
 
