@@ -92,6 +92,7 @@ DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_local_root_password
 DB_NAME=dish_search_service
+DB_PORT=3306
 ```
 
 **Schema and Data Seeding**
