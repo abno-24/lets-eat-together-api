@@ -13,6 +13,11 @@ const pool = mysql.createPool({
   queueLimit: 0,
 });
 
+/**
+ * Establishes a connection to the database, releases it and logs the status.
+ * If the connection fails, logs the error and exits the process with a non-zero status code.
+ * @returns {Promise<void>}
+ */
 const connectDB = async () => {
   try {
     const connection = await pool.getConnection();
@@ -24,6 +29,14 @@ const connectDB = async () => {
   }
 };
 
+/**
+ * Executes a database query with the provided SQL and parameters.
+ * Releases the connection after the query is finished.
+ * Logs an error message if the query fails and throws an ApiError.
+ * @param {string} sql The SQL query to execute.
+ * @param {Array} [params] The parameters to pass to the query.
+ * @returns {Promise<Array>} The result of the query as an array of objects.
+ */
 const executeQuery = async (sql, params = []) => {
   let connection;
   try {

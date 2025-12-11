@@ -85,11 +85,9 @@ To run the code locally, follow these steps:
 **Database Configuration (.env)**
 
 ```json
-# Server Config
 PORT=3000
 CORS_ORIGIN=*
 
-# Local Database Config
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_local_root_password
@@ -105,9 +103,7 @@ DB_NAME=dish_search_service
 
 **Run the Server**
 
-```json
-npm start
-```
+`npm start`
 
 The API Health check will be available at http://localhost:3000/api/v1/health.
 

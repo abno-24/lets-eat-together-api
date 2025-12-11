@@ -1,5 +1,12 @@
 import { executeQuery } from "../db/db.js";
 
+/**
+ * Retrieves the top 10 restaurants serving a given dish within a specified price range.
+ * @param {string} dishName - The name of the dish to search for.
+ * @param {number} minPrice - The minimum price of the dish.
+ * @param {number} maxPrice - The maximum price of the dish.
+ * @returns {Promise<Array<Object>>} - An array of objects containing the restaurant ID, name, city, dish name, price, and order count.
+ */
 const searchTopRestaurantsByDish = async (dishName, minPrice, maxPrice) => {
   const sql = `
   SELECT 

@@ -3,7 +3,7 @@ USE railway;
 -- Disable checks for clean insertion
 SET FOREIGN_KEY_CHECKS = 0;
 
--- 1. Insert Data into Restaurants Table (5 Restaurants)
+-- 1. Insert Data into Restaurants Table
 INSERT INTO Restaurants (id, name, city) VALUES
 (1, 'Biryani King', 'Mumbai'),
 (2, 'Spice Route', 'Delhi'),
@@ -23,26 +23,26 @@ INSERT INTO Restaurants (id, name, city) VALUES
 
 -- 2. Insert Data into Menu_Items Table (Dishes offered by restaurants)
 
--- Focus Dish: Chicken Biryani (Price range target: 150-300)
+-- Focus Dish: Biryani (Price range target: 150-300)
 INSERT INTO Menu_Items (id, restaurant_id, name, price) VALUES
-(101, 1, 'Biryani', 220.00), -- R1: Price IN range
-(102, 2, 'Biryani', 280.00), -- R2: Price IN range
-(103, 3, 'Biryani', 140.00), -- R3: Price OUT (Too low)
-(104, 4, 'Biryani', 350.00), -- R4: Price OUT (Too high)
-(105, 5, 'Biryani', 180.00), -- R5: Price IN range
-(109, 6, 'Biryani', 200.00),  -- R6: Price IN range
-(110, 7, 'Biryani', 210.00),  -- R7: Price IN range
-(111, 8, 'Biryani', 235.00),  -- R8: Price IN range
-(112, 9, 'Biryani', 250.00),  -- R9: Price IN range
-(113, 10, 'Biryani', 175.00), -- R10: Price IN range
-(114, 11, 'Biryani', 290.00), -- R11: Price IN range
-(115, 12, 'Biryani', 160.00); -- R12: Price IN range
+(101, 1, 'Biryani', 220.00),
+(102, 2, 'Biryani', 280.00),
+(103, 3, 'Biryani', 140.00),
+(104, 4, 'Biryani', 350.00),
+(105, 5, 'Biryani', 180.00),
+(109, 6, 'Biryani', 200.00),
+(110, 7, 'Biryani', 210.00),
+(111, 8, 'Biryani', 235.00),
+(112, 9, 'Biryani', 250.00),
+(113, 10, 'Biryani', 175.00),
+(114, 11, 'Biryani', 290.00),
+(115, 12, 'Biryani', 160.00);
 
 -- Other Dishes (Should not affect the search for 'biryani')
 INSERT INTO Menu_Items (id, restaurant_id, name, price) VALUES
 (106, 1, 'Chicken', 450.00),
 (107, 2, 'Paneer', 300.00),
-(108, 5, 'Manchurian', 150.00); -- Another biryani variant
+(108, 5, 'Manchurian', 150.00);
 
 -- 3. Insert Data into Orders Table (The order counts for testing)
 

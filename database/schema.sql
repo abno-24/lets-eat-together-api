@@ -21,14 +21,13 @@ CREATE TABLE Menu_Items (
     id INT AUTO_INCREMENT PRIMARY KEY,
     restaurant_id INT NOT NULL,
     name VARCHAR(255) NOT NULL,
-    price DECIMAL(10, 2) NOT NULL, -- DECIMAL is best for currency
+    price DECIMAL(10, 2) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     -- Foreign Key Constraint
     FOREIGN KEY (restaurant_id) REFERENCES Restaurants(id) ON DELETE CASCADE
 );
 
 -- 3. Orders Table
--- For simplicity, assuming one row = one order for one dish
 CREATE TABLE Orders (
     id INT AUTO_INCREMENT PRIMARY KEY,
     menu_item_id INT NOT NULL,
