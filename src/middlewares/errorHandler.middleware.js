@@ -11,7 +11,6 @@ import { ApiError } from "../utils/api/ApiError.js";
  * If the error is unknown, it returns a JSON response with a generic 500 Internal Server Error message.
  */
 const errorHandler = (err, req, res, next) => {
-  // Checks if the error is an instance of ApiError
   if (err instanceof ApiError) {
     return res.status(err.statusCode).json({
       statusCode: err.statusCode,
@@ -22,7 +21,6 @@ const errorHandler = (err, req, res, next) => {
     });
   }
 
-  // Handles unknown error
   return res.status(500).json({
     statusCode: 500,
     success: false,
