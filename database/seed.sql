@@ -1,4 +1,4 @@
-USE dish_search_service;
+USE railway;
 
 -- Disable checks for clean insertion
 SET FOREIGN_KEY_CHECKS = 0;
