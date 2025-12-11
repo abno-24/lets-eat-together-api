@@ -103,7 +103,9 @@ DB_NAME=dish_search_service
 
 **Run the Server**
 
-`npm start`
+```
+npm start
+```
 
 The API Health check will be available at http://localhost:3000/api/v1/health.
 
